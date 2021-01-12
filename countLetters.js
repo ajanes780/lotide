@@ -32,3 +32,5 @@ return
 }
 console.log(countingLetters("LHL"));
 
+
+module.exports = countingLetters

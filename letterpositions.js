@@ -1,22 +1,5 @@
-const eqArrays = function (arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  } else {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function (actual, expected) {
-  let result = eqArrays(actual, expected)
-    ? `✅ Assertion Passed: ${actual} === ${expected}`
-    : `🛑 Assertion Failed: ${actual} !== ${expected}`;
-  return console.log( result);
-};
+const eqArrays = require(`./eqArrays`)
+const assertArraysEqual = require(`../lotide/assertArraysEqual`)
 
 
 
@@ -36,4 +19,8 @@ const letterPositions = function(data){
   return lettersByIndex 
 }
 
+
 assertArraysEqual(letterPositions("hello").e, [1]);
+
+
+module.exports = letterPositions; 

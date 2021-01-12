@@ -1,15 +1,4 @@
 
-
-// FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    if (actual !== expected) {
-      console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-    }
-  }
-};
 let keyValues1 = [];
 let keyValues2 =[];
 // Returns true if both objects have identical keys with identical values.
@@ -50,3 +39,6 @@ eqObjects(cd, dc); // => true
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
 eqObjects(cd, cd2); // => false
+
+
+module.exports = eqObjects;

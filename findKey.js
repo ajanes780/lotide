@@ -1,13 +1,3 @@
-// FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    if (actual !== expected) {
-      console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-    }
-  }
-};
 
 //versiosn 2.0
  const findKey = function (planetsObj, callback ){
@@ -45,4 +35,4 @@ const result = findKey({
 // console.log(result);
 assertEqual(result, "noma")
 
-
+module.exports = findKey; 
