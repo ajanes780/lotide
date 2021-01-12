@@ -10,12 +10,12 @@ const eqArrays = require(`../lotide/eqArrays`)
 const middle = function(arrayToMiddle) {
   let index = [];
   let emptyArray = [];
-  if (arrayToMiddle.length <= 2) {
+  if (arrayToMiddle.length <= 2) {  /// if the arry is less then two return []
     return emptyArray;
-  } else if (arrayToMiddle.length % 2 !== 0) {
+  } else if (arrayToMiddle.length % 2 !== 0) { // if its not a even length 
     index.push(Math.round(arrayToMiddle.length / 2));
     return index;
-  } else if (arrayToMiddle.length % 2 === 0) {
+  } else if (arrayToMiddle.length % 2 === 0) { // if it is a even length 
     index.push(arrayToMiddle.length / 2,arrayToMiddle.length / 2 + 1);
     return index;
   }
@@ -24,13 +24,5 @@ const middle = function(arrayToMiddle) {
 
 
 
-  
 
-
-assertArraysEqual(middle([]), []);
-assertArraysEqual(middle([1]), [],false);
-assertArraysEqual(middle([1, 2]), [], false);
-assertArraysEqual(middle([1, 2, 3]), [2], true);
-assertArraysEqual(middle([1, 2, 3, 4, 5]),[3],true);
-assertArraysEqual(middle([1, 2, 3, 4]),[2, 3],true);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]),[3, 4], true );
+module.exports = middle; 
